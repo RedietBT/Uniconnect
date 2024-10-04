@@ -32,16 +32,16 @@ const toggleMenu = () => {
                     <!-- Search Bar, Menu Icon, and Login/SignUp shifted to the right -->
                      <div class="flex items-center ml-auto space-x-4"> <!-- Added ml-auto to shift content to the right -->
                         <form @submit.prevent="handleSearch" class="flex items-center">
-                            <input v-model="searchQuery" type="text" placeholder="Search..." class="w-full px-4 py-2 border border-blue-950 rounded-full shadow-sm focus:outline-none"/>
-                            <button class="rounded-full bg-slate-600 w-8 h-8 flex items-center justify-center hover:bg-slate-700 hover:shadow-lg transition-all duration-300">
+                            <input v-model="searchQuery" type="text" placeholder="Search..." class="w-full px-4 py-2 border border-blue-950 rounded-full shadow-sm focus:outline-none bg-slate-900 text-white "/>
+                            <button class="rounded-full bg-slate-600 w-8 h-8 flex items-center justify-center hover:bg-slate-700 hover:shadow-lg transition-all duration-300 ml-2">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
                         <button @click="toggleMenu" class="rounded-full bg-slate-600 w-8 h-8 flex items-center justify-center hover:bg-slate-700 hover:shadow-lg transition-all duration-300">
                             <i class="fa-solid fa-list"></i>
                         </button>
-                        <button class="rounded-full bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-all duration-300">Log In</button>
-                        <button class="rounded-full bg-slate-600 px-4 py-2 text-white hover:bg-slate-700 transition-all duration-300">Sign Up</button>
+                        <button class="rounded-full bg-slate-900 px-4 py-2 text-white hover:bg-slate-700 transition-all duration-300">Log In</button>
+                        <button class="rounded-full bg-slate-900 px-4 py-2 text-white hover:bg-slate-700 transition-all duration-300">Sign Up</button>
                     </div>
                 </nav>
                 <!-- Sliding Menu -->
