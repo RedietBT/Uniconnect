@@ -53,7 +53,7 @@ const toggleMenu = () => {
                           <div class="bg-white w-1/3 flex flex-col justify-center items-center text-blue-950 p-8">
                             <ul class="space-y-4 text-lg">
                                 <li v-for="(item, index) in menuItems" :key="item" :style="{transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up font-medium text-slate-900">
-                    <RouterLink v-if="item === 'About Uniconnect'" to="/about-uniconnect/">{{ item }}</RouterLink>
+                    <RouterLink v-if="item === 'About Uniconnect'" to="/About_uniconnect/">{{ item }}</RouterLink>
                     <a v-else>{{ item }}</a>
                 </li>
                             </ul>
