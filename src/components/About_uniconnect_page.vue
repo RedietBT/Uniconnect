@@ -1,4 +1,6 @@
-<!-- src/components/AboutUniconnect.vue -->
+<script setup>
+
+  </script>
 <template>
     <div class="p-4">
       <h1 class="text-blue-950 text-5xl font-bold">About UniConnect</h1>
@@ -7,12 +9,7 @@
       </p>
     </div>
   </template>
-  
-  <script setup>
-
-  </script>
-  
   <style scoped>
-  /* Add any custom styles here */
+  
   </style>
   
