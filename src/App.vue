@@ -1,9 +1,10 @@
 <script setup>
-import Home_page from './components/Home_page.vue'
+import {RouterView} from "vue-router"
 </script>
 
 <template>
-  <Home_page />
+
+  <RouterView />
    
 </template>
 

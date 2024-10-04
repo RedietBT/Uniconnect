@@ -5,7 +5,7 @@ const isMenuOpen = ref(false);
 const searchQuery = ref('');
 const backgroundImage = 'https://i.pinimg.com/236x/14/07/29/140729b1f0146860cd7887cce9d925a2.jpg'; // Replace with your image URL
 
-const menuItems = ref(['Menu Item 1', 'Menu Item 2', 'Menu Item 3', 'Menu Item 4']);
+const menuItems = ref(['About Uniconnect', 'New Internship ', 'Scholarships', 'Researches', 'Blogs' , 'News']);
 
 const handleSearch = () => {
   console.log(searchQuery.value);
@@ -52,9 +52,10 @@ const toggleMenu = () => {
                          <!-- Right Side: Menu (35% width) -->
                           <div class="bg-white w-1/3 flex flex-col justify-center items-center text-blue-950 p-8">
                             <ul class="space-y-4 text-lg">
-                                <li v-for="(item, index) in menuItems" :key="item" :style="{transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up">
-                                    {{ item }}
-                                </li>
+                                <li v-for="(item, index) in menuItems" :key="item" :style="{transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up font-medium text-slate-900">
+                    <RouterLink v-if="item === 'About Uniconnect'" to="/about-uniconnect">{{ item }}</RouterLink>
+                    <a v-else>{{ item }}</a>
+                </li>
                             </ul>
                         </div>
                     </div>
@@ -65,7 +66,7 @@ const toggleMenu = () => {
                 </transition>
             </div>
             <header>
-               <img src="https://i.pinimg.com/236x/a8/8d/46/a88d4685a031b5a470ef7817f1307205.jpg" class="mt-[100px] w-full h-[350px] ">
+               <img src="https://i.pinimg.com/236x/a8/8d/46/a88d4685a031b5a470ef7817f1307205.jpg" class="mt-[100px] w-full h-[350px]">
             </header>
             <main>
                 <div class="w-full bg-slate-900 h-35 flex justify-center space-x-10 mb-5 ">
