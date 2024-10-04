@@ -28,7 +28,7 @@ const toggleMenu = () => {
         <div class="bg-white">
             <div>
                 <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 h-25 bg-white drop-shadow-lg">
-                    <h1 class="text-blue-950 text-5xl font-bold ml-8">UniConnect</h1>
+                    <h1 class="text-slate-900 text-5xl font-bold ml-8">UniConnect</h1>
                     <!-- Search Bar, Menu Icon, and Login/SignUp shifted to the right -->
                      <div class="flex items-center ml-auto space-x-4"> <!-- Added ml-auto to shift content to the right -->
                         <form @submit.prevent="handleSearch" class="flex items-center">
