@@ -5,7 +5,7 @@ const isMenuOpen = ref(false);
 const searchQuery = ref('');
 const backgroundImage = 'https://i.pinimg.com/236x/14/07/29/140729b1f0146860cd7887cce9d925a2.jpg'; // Replace with your image URL
 
-const menuItems = ref(['About Uniconnect', 'New Internship ', 'Scholarships', 'Researches', 'Blogs' , 'News']);
+const menuItems = ref(['About Uniconnect', 'New Internship', 'Scholarships', 'Researches', 'Blogs' , 'News']);
 
 const handleSearch = () => {
   console.log(searchQuery.value);
@@ -52,10 +52,15 @@ const toggleMenu = () => {
                          <!-- Right Side: Menu (35% width) -->
                           <div class="bg-white w-1/3 flex flex-col justify-center items-center text-blue-950 p-8">
                             <ul class="space-y-4 text-lg">
-                                <li v-for="(item, index) in menuItems" :key="item" :style="{transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up font-medium text-slate-900">
-                    <RouterLink v-if="item === 'About Uniconnect'" to="/About_uniconnect/">{{ item }}</RouterLink>
-                    <a v-else>{{ item }}</a>
-                </li>
+                                <li v-for="(item, index) in menuItems" :key="item" :style="{ transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up font-medium text-slate-900">
+                                    <RouterLink v-if="item === 'About Uniconnect'" to="/About_uniconnect">{{ item }}</RouterLink>
+                                    <RouterLink v-else-if="item === 'New Internship'" to="/new-internship">{{ item }}</RouterLink>
+                                    <RouterLink v-else-if="item === 'Scholarships'" to="/scholarships">{{ item }}</RouterLink>
+                                    <RouterLink v-else-if="item === 'Researches'" to="/researches">{{ item }}</RouterLink>
+                                    <RouterLink v-else-if="item === 'Blogs'" to="/blogs">{{ item }}</RouterLink>
+                                    <RouterLink v-else-if="item === 'News'" to="/news">{{ item }}</RouterLink>
+                                    <a v-else>{{ item }}</a> <!-- Fallback if no route is found -->
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -154,6 +159,18 @@ const toggleMenu = () => {
             </main>
         </div>
     </body>
+    <!-- footer -->
+    <footer class="text-white py-8 bg-slate-900">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="text-center text-sm">
+                © 2024 UniConnect. All rights reserved.
+            </div>
+        </footer>
 </html>
 </template>
 <style scoped>
