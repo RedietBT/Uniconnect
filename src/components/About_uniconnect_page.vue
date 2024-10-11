@@ -6,7 +6,7 @@ const isMenuOpen = ref(false);
 const searchQuery = ref('');
 const backgroundImage = 'https://i.pinimg.com/236x/14/07/29/140729b1f0146860cd7887cce9d925a2.jpg'; // Replace with your image URL
 
-const menuItems = ref(['About Uniconnect', 'New Internship ', 'Scholarships', 'Researches', 'Blogs' , 'News']);
+const menuItems = ref(['Home', 'About Uniconnect', 'New Internship', 'Scholarships', 'Researches', 'Blogs' , 'News']);
 
 const handleSearch = () => {
   console.log(searchQuery.value);
@@ -117,7 +117,14 @@ onBeforeUnmount(() => {
                           <div class="bg-white w-1/3 flex flex-col justify-center items-center text-blue-950 p-8">
                             <ul class="space-y-4 text-lg">
                                 <li v-for="(item, index) in menuItems" :key="item" :style="{transitionDelay: `${index * 0.2}s` }" class="opacity-0 animate-fade-in-up font-medium text-slate-900">
+
+                    <RouterLink v-if="item === 'Home'" to="/">{{ item }}</RouterLink>
                     <RouterLink v-if="item === 'About Uniconnect'" to="/about-uniconnect/">{{ item }}</RouterLink>
+                    <RouterLink v-else-if="item === 'New Internship'" to="/new-internship">{{ item }}</RouterLink>
+                    <RouterLink v-else-if="item === 'Scholarships'" to="/scholarships">{{ item }}</RouterLink>
+                    <RouterLink v-else-if="item === 'Researches'" to="/researches">{{ item }}</RouterLink>
+                    <RouterLink v-else-if="item === 'Blogs'" to="/blogs">{{ item }}</RouterLink>
+                    <RouterLink v-else-if="item === 'News'" to="/news">{{ item }}</RouterLink>
                     <a v-else>{{ item }}</a>
                 </li>
                             </ul>

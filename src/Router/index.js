@@ -20,7 +20,7 @@ const router=createRouter({
         component:About_uniconnect_page
       },
       {
-        path:"/new_internship/",
+        path:"/new-internship/",
         name:"New Internship",
         component:NewInternship
       },
